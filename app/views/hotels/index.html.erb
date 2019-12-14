@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Description</th>
       <th>Phone number</th>
       <th>City</th>
       <th>Country code</th>
@@ -20,6 +21,7 @@
     <% @hotels.each do |hotel| %>
       <tr>
         <td><%= hotel.name %></td>
+        <td><%= hotel.description %></td>
         <td><%= hotel.phone_number %></td>
         <td><%= hotel.city %></td>
         <td><%= hotel.country_code %></td>
