@@ -7,3 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 AdminUser.create!(email: 'christophe.leray1@gmail.com', password: 'totoff09', password_confirmation: 'totoff09') if Rails.env.development?
 
+Area.create!(name: "Saint-Malo", status: 3)
+Area.create!(name: "Paris", status: 3)
+Area.create!(name: "Vannes", status: 1)
+Area.create!(name: "Lorient", status: 0)
+
+Activity.create!(title: "Tour en kayak", status: 3, category: 0)
+Activity.create!(title: "Tour en bateau", status: 3, category: 0)
+Activity.create!(title: "Tour en poney", status: 3, category: 3)
+Activity.create!(title: "Degustation huitres", status: 1, category: 1)
+Activity.create!(title: "Tour des remparts", status: 1, category: 0)
+Activity.create!(title: "Casino", status: 3, category: 1)
