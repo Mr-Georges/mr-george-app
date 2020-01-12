@@ -10,7 +10,9 @@ ActiveAdmin.register Activity do
   index do 
     selectable_column
     column :id
-    column :area_ids
+    column :areas do |activity|
+      activity.areas.map { |aa| aa.name}.join(", ")
+    end
     column :title 
     column :content
     column :url 
@@ -25,7 +27,9 @@ ActiveAdmin.register Activity do
     panel "Activity details" do
       attributes_table_for activity do
         row :id
-        row :areas_ids
+        row :areas do |activity|
+          activity.areas.map { |aa| aa.name}.join(", ")
+        end
         row :title 
         row :content
         row :url 
