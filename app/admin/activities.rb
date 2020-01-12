@@ -1,11 +1,16 @@
 ActiveAdmin.register Activity do
   permit_params :title, :url, :status, :category, :content, area_ids: []
-
+  
+  scope :all
+  scope :status_draft
+  scope :status_pending
+  scope :status_published
+  scope :status_canceled
 
   index do 
     selectable_column
     column :id
-    column :area
+    column :area_ids
     column :title 
     column :content
     column :url 
@@ -17,10 +22,10 @@ ActiveAdmin.register Activity do
   end
 
   show do
-    panel "Area details" do
+    panel "Activity details" do
       attributes_table_for activity do
         row :id
-        row :area_ids
+        row :areas_ids
         row :title 
         row :content
         row :url 
