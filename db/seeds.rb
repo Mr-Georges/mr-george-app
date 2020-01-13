@@ -7,10 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 AdminUser.create!(email: 'christophe.leray1@gmail.com', password: 'totoff09', password_confirmation: 'totoff09')
 
-Area.create!(name: "Saint-Malo", status: 3)
-Area.create!(name: "Paris", status: 3)
-Area.create!(name: "Vannes", status: 1)
-Area.create!(name: "Lorient", status: 0)
+Area.create!(name: "Saint-Malo", status: 2)
+
 
 if Rails.env.development?
     Activity.create!(title: "Tour en kayak", status: 3, category: 0)
