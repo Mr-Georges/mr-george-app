@@ -1,44 +1,47 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @hotel.name %>
-</p>
+  <div class="jumbotron">
+    <p>
+      <strong>Name:</strong>
+      <%= @hotel.name %>
+    </p>
+  </div>
+  <p>
+    <strong>Description:</strong>
+    <%= @hotel.description %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @hotel.description %>
-</p>
+  <p>
+    <strong>Phone number:</strong>
+    <%= @hotel.phone_number %>
+  </p>
 
-<p>
-  <strong>Phone number:</strong>
-  <%= @hotel.phone_number %>
-</p>
+  <p>
+    <strong>City:</strong>
+    <%= @hotel.city %>
+  </p>
 
-<p>
-  <strong>City:</strong>
-  <%= @hotel.city %>
-</p>
+  <p>
+    <strong>Country code:</strong>
+    <%= @hotel.country_code %>
+  </p>
 
-<p>
-  <strong>Country code:</strong>
-  <%= @hotel.country_code %>
-</p>
+  <p>
+    <strong>Postal code:</strong>
+    <%= @hotel.postal_code %>
+  </p>
 
-<p>
-  <strong>Postal code:</strong>
-  <%= @hotel.postal_code %>
-</p>
+  <p>
+    <strong>State:</strong>
+    <%= @hotel.state %>
+  </p>
 
-<p>
-  <strong>State:</strong>
-  <%= @hotel.state %>
-</p>
+  <p>
+    <strong>Street name:</strong>
+    <%= @hotel.street_name %>
+  </p>
 
-<p>
-  <strong>Street name:</strong>
-  <%= @hotel.street_name %>
-</p>
-
-<%= link_to 'Edit', edit_hotel_path(@hotel) %> |
-<%= link_to 'Back', hotels_path %>
+  <%= link_to 'Edit', edit_hotel_path(@hotel) %> |
+  <%= link_to 'Back', hotels_path %>
+</div>
