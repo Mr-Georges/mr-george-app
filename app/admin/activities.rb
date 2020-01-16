@@ -1,5 +1,5 @@
 ActiveAdmin.register Activity do
-  permit_params :title, :url, :status, :category, :content, area_ids: []
+  permit_params :title, :url, :status, :group, :content, area_ids: []
   
   scope :all
   scope :status_draft
@@ -16,7 +16,7 @@ ActiveAdmin.register Activity do
     column :title 
     column :content
     column :url 
-    column :category
+    column :group
     column :status 
     column :created_at
     column :updated_at
@@ -33,7 +33,7 @@ ActiveAdmin.register Activity do
         row :title 
         row :content
         row :url 
-        row :category
+        row :group
         row :status 
         row :created_at
         row :updated_at
@@ -50,7 +50,7 @@ ActiveAdmin.register Activity do
       f.input :title
       f.input :content
       f.input :url
-      f.input :category
+      f.input :group
       f.input :status
     end
     f.actions
