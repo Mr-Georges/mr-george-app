@@ -18,6 +18,8 @@ require("channels")
 
 require("trix")
 require("@rails/actiontext")
-import 'bootstrap/dist/js/bootstrap';
+//import 'bootstrap/dist/js/bootstrap';
+import './bootstrap_custom.js'
 import '../stylesheets/application'
+//import '../stylesheets/actiontext'
 console.log('Hello World from Webpacker');
