@@ -1,5 +1,5 @@
 ActiveAdmin.register Activity do
-  permit_params :title, :url, :status, :group, :content, area_ids: []
+  permit_params :title, :url, :status, :group, :content, area_ids: [], category_ids: []
   
   scope :all
   scope :status_draft
@@ -11,12 +11,15 @@ ActiveAdmin.register Activity do
     selectable_column
     column :id
     column :areas do |activity|
-      activity.areas.map { |aa| aa.name}.join(", ")
+      activity.areas.map { |aa| aa.name }.join(", ")
     end
     column :title 
     column :content
     column :url 
     column :group
+    column :categories do |activity|
+      activity.categories.map { |ac| ac.name }.join(", ")
+    end
     column :status 
     column :created_at
     column :updated_at
@@ -28,12 +31,15 @@ ActiveAdmin.register Activity do
       attributes_table_for activity do
         row :id
         row :areas do |activity|
-          activity.areas.map { |aa| aa.name}.join(", ")
+          activity.areas.map { |aa| aa.name }.join(", ")
         end
         row :title 
         row :content
         row :url 
         row :group
+        row :categories do |activity|
+          activity.categories.map { |ac| ac.name }.join(", ")
+        end       
         row :status 
         row :created_at
         row :updated_at
@@ -51,6 +57,10 @@ ActiveAdmin.register Activity do
       f.input :content
       f.input :url
       f.input :group
+      f.input :category_ids, 
+        as: :check_boxes,
+        multiple: true,
+        collection: Category.all   
       f.input :status
     end
     f.actions
