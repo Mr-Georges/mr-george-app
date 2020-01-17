@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
-
 gem 'devise'
 gem 'activeadmin'
 gem 'rails', '~> 6.0.1'
@@ -12,6 +11,7 @@ gem 'sass-rails', '>= 6'
 gem 'cloudinary'
 gem 'faker'
 gem 'slack-notifier'
+gem 'activeadmin_quill_editor'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

@@ -54,7 +54,7 @@ ActiveAdmin.register Activity do
         multiple: true,
         collection: Area.all
       f.input :title
-      f.input :content
+      f.input :content, as: :quill_editor
       f.input :url
       f.input :group
       f.input :category_ids, 
